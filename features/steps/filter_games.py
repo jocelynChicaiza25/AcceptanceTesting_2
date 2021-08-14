@@ -19,11 +19,11 @@ def step_impl(context):
 
 	context.games = game_list
 
-#@given('a list of ratings {[ratings]}')
-#def step_impl(context, ratings):
-#	context.ratings=ratings
-#	print(ratings)	
-	
+@given('a list of ratings {[rating]}')
+def step_impl(context, rating):
+	context.rating=rating
+	print(rating)	
+
 @given('the user enters the name: {name}')
 def step_impl(context, name):
 	context.name = name
