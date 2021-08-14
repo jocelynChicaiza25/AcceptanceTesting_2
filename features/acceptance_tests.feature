@@ -4,7 +4,7 @@
 Feature: Search games by ratings and developer
 
     @gamesByRaTING
-    Scenario: Filter games that has rating ["E","M"]
+    Scenario: Filter games that has rating '["E","M"]'
     Given a set of games
      | NAME                       | RELEASE DATE | DEVELOPER            | RATE   |
      | The Witcher 3: Wild Hunt   | 2015         | CD Projekt           | M      |
