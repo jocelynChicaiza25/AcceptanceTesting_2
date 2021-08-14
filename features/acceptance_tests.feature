@@ -1,18 +1,18 @@
 # language: en
-# Angie Patricia Argudo Duarte, Jocelyn Chicaiza (ratings)
-# Francisco Basantes(developer)
+# Angie Argudo, Jocelyn Chicaiza (ratings)
+# Francisco Basantes (developer)
 Feature: Search games by ratings and developer
 
-    @gamesByRaTING
-    Scenario: Filter games that has rating '["E","M"]'
+    @gamesByRatings
+    Scenario: Filter games that has ratings "E","M"
     Given a set of games
      | NAME                       | RELEASE DATE | DEVELOPER            | RATE   |
      | The Witcher 3: Wild Hunt   | 2015         | CD Projekt           | M      |
      | Splatoon                   | 2016         | Nintendo             | T      |
      | Super Smash Bros. Ultimate | 2018         | Bandai Namco Studios | E      |
      | The Last of Us             | 2013         | Naughty Dog          | M      |
-    Given a list of ratings ["E","M"]
-    When the user search games by rating
+    Given the user enters the ratings: "E,M"
+    When the user search games by ratings
     Then 3 games will match
     Then the names of these games are
     | NAME                       |
