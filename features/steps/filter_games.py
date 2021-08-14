@@ -23,9 +23,10 @@ def step_impl(context):
 def step_impl(context, name):
 	context.name = name
 
-@given('the user selects one or more ratings: {ratings}')
-def step_impl(context, ratings):
-	context.ratings = ratings
+@given('a list of ratings {[rating]}')
+def step_impl(context, rating):
+	context.rating=rating
+	print(rating)	
 
 @when("the user search games by {criteria}")
 def step_impl(context, criteria):
