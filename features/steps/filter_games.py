@@ -19,7 +19,6 @@ def step_impl(context):
 
 	context.games = game_list
 
-
 @given('the user enters the name: {name}')
 def step_impl(context, name):
 	context.name = name
