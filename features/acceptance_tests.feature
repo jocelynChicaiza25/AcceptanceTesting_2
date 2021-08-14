@@ -1,6 +1,6 @@
 # language: en
 # Angie Patricia Argudo Duarte, Jocelyn Chicaiza (ratings)
-# (developer)
+# Francisco Basantes(developer)
 Feature: Search games by ratings and developer
 
     @gamesByRaTING
