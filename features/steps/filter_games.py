@@ -19,19 +19,19 @@ def step_impl(context):
 
 	context.games = game_list
 
-#@given('a list of ratings {[rating]}')
-#def step_impl(context, rating):
-#	context.rating=rating
-#	print(rating)	
+#@given('a list of ratings {[ratings]}')
+#def step_impl(context, ratings):
+#	context.ratings=ratings
+#	print(ratings)	
 	
 @given('the user enters the name: {name}')
 def step_impl(context, name):
 	context.name = name
 
-#rating 
-@given('the user enters the rating: {rating}')
-def step_impl(context, rating):
-	context.rating = rating
+#rating
+@given('the user enters the ratings: {ratings}')
+def step_impl(context, ratings):
+	context.ratings = ratings
 
 #Developer
 @given('the user enters the developer: {study}')
@@ -49,10 +49,11 @@ def step_impl(context, criteria):
 		result, message = get_game_developer(context.games, context.study)
 		context.result = result
 		context.message = message
-	elif (criteria == 'rating'):
-		result, message = get_game_rating(context.games, context.rating)
+	elif (criteria == 'ratings'):
+		result, message, error = get_game_rating(context.games, context.ratings)
 		context.result = result
 		context.message = message
+		context.error = error
 
 @then("{total} games will match")
 def step_impl(context, total):
